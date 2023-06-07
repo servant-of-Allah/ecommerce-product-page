@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Rubik:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .custom-btn {
+    @apply bg-orange text-white py-4 md:py-3 w-full rounded-md border-none font-bold hover:opacity-[0.7];
+    /* box-shadow: 0px 6px 12px 3px #fcd8b0; */
+    position: relative;
+  }
+
+  .custom-btn::after {
+    content: "";
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 25px;
+    background-color: orange;
+    opacity: 0.5;
+    filter: blur(10px);
+    border-radius: 60%;
+  }
+
+  .cart-shadow {
+    box-shadow: 1px 19px 26px 0px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 1px 19px 26px 0px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 1px 19px 26px 0px rgba(0, 0, 0, 0.16);
+  }
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
